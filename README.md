@@ -121,6 +121,8 @@ FROM database.table;
 ===
 
 1. What does SQL stand for?  How is it pronounced?
+Structured Query Language. Pronounced "Es Que El" or "Sequel" 
+
 2. Are SQL commands case-sensitive?  How can you determine? 
 3. What does DQL stand for?
 4. True or False:  Is it necessary to use the `FROM` clause with the select statement? 
