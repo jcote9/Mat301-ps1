@@ -128,7 +128,7 @@ Structured Query Language. Pronounced "Es Que El" or "Sequel"
 2. Are SQL commands case-sensitive?  How can you determine? 
 
 
-No they are not case sensitive. 
+No they are not case sensitive. They are case insensitive. 
 
 3. What does DQL stand for?
 
@@ -138,7 +138,14 @@ Data query language
 Yes it is necessary 
 
 5. True or False:  Is it necessary to use a `WHERE` clause?  If not, when and why would you use a `WHERE` clause?
+
+False: You would use it when you want to, for example, select a price from products where price is > 9.99. In this instance we need the 'where' clause to specify the price being slected. 
+
 6. What is the purpose of the `ORDER BY` clause?  What is its default value?  
+
+Default value is ascending. The 'ORDER BY' clause allows you to select products from a table and sort them, by price for example. 
+
+
 7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive? 
 8. Select all product names.
 9. List the MSRP for all products in ascending order.
