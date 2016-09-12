@@ -122,17 +122,16 @@ FROM database.table;
 
 1. What does SQL stand for?  How is it pronounced? 
 
-
 Structured Query Language. Pronounced "Es Que El" or "Sequel" 
 
 2. Are SQL commands case-sensitive?  How can you determine? 
-
 
 No they are not case sensitive. They are case insensitive. 
 
 3. What does DQL stand for?
 
 Data query language 
+
 4. True or False:  Is it necessary to use the `FROM` clause with the select statement? 
 
 Yes it is necessary 
@@ -145,11 +144,22 @@ False: You would use it when you want to, for example, select a price from produ
 
 Default value is ascending. The 'ORDER BY' clause allows you to select products from a table and sort them, by price for example. 
 
-
 7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive? 
+ 
+It is case sensitive for product and column names. However, the keywords are NOT case sensitive (select, from, etc.) It is the objects that are case sensitive. 
+
 8. Select all product names.
+
+Select name from unemath_Cote.Products;
 9. List the MSRP for all products in ascending order.
+
+Select msrp from unemath_Cote.Products order by msrp;
+
 10. Find all products within  category 430.  What is category 430?
+
+Select product_id from unemath_Cote.Products where category_id=430; 
+
+Category 430 is glasses.
 11. Find all product id and names in category 430 manufactured by 428.
 12. How many products in category 430 manufactured by 428?
 13. How many countries make products contained in the store?
