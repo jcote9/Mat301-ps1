@@ -160,13 +160,36 @@ Select msrp from unemath_Cote.Products order by msrp;
 Select product_id from unemath_Cote.Products where category_id=430; 
 
 Category 430 is glasses.
+
 11. Find all product id and names in category 430 manufactured by 428.
+
+Select product_id from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
+
 12. How many products in category 430 manufactured by 428?
+
+18.
+
 13. How many countries make products contained in the store?
+
+
 14. How many products are manufactured in the USA?
+
+
 15. How many products cost the company less than $10?
+
+Select count(*) from unemath_Cote.Products where price <10;
+7567
+
 16. How many products cost the company less than $10 and sell for more than $20?
+
+
 17. How many products cost the company less than $10 and sell for less than $20?
 18. Which products cost less than $10 and sell for more than $20?
 19. Count all product's that have shipping weight less than 1 pound or greater than 20 pounds.
+
+Select count(*) from unemath_Cote.Products where ship_weight <1;
+Select count(*) from unemath_Cote.Products where ship_weight >20;
+
+641+465=1,106
+
 20. Create your own query.
