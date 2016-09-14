@@ -170,7 +170,7 @@ FROM database.table;
  
  Select count from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
 
-18.
+ 18.
 
 13. How many countries make products contained in the store?
 
@@ -206,10 +206,7 @@ FROM database.table;
 
 19. Count all product's that have shipping weight less than 1 pound or greater than 20 pounds.
 
- Select count(*) from unemath_Cote.Products where ship_weight <1;
- Select count(*) from unemath_Cote.Products where ship_weight >20;
-
- 641+465=1,106
+ SELECT count(*) from unemath_Cote.Products where ship_weight <1 or ship_weight >20;
 
 20. Create your own query.
 
