@@ -122,93 +122,94 @@ FROM database.table;
 
 1. What does SQL stand for?  How is it pronounced? 
 
-Structured Query Language. Pronounced "Es Que El" or "Sequel" 
+ Structured Query Language. Pronounced "Es Que El" or "Sequel" 
 
 2. Are SQL commands case-sensitive?  How can you determine? 
 
-No they are not case sensitive. They are case insensitive. 
+ No they are not case sensitive. They are case insensitive. 
 
 3. What does DQL stand for?
 
-Data query language 
+ Data query language 
 
 4. True or False:  Is it necessary to use the `FROM` clause with the select statement? 
 
-Yes it is necessary 
+ Yes it is necessary 
 
 5. True or False:  Is it necessary to use a `WHERE` clause?  If not, when and why would you use a `WHERE` clause?
 
-False: You would use it when you want to, for example, select a price from products where price is > 9.99. In this instance we need the 'where' clause to specify the price being slected. 
+ False: You would use it when you want to, for example, select a price from products where price is > 9.99. In this instance we need the 'where' clause to specify the price being slected. 
 
 6. What is the purpose of the `ORDER BY` clause?  What is its default value?  
 
-Default value is ascending. The 'ORDER BY' clause allows you to select products from a table and sort them, by price for example. 
+ Default value is ascending. The 'ORDER BY' clause allows you to select products from a table and sort them, by price for example. 
 
 7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive? 
  
-It is case sensitive for product and column names. However, the keywords are NOT case sensitive (select, from, etc.) It is the objects that are case sensitive. 
+ It is case sensitive for product and column names. However, the keywords are NOT case sensitive (select, from, etc.) It is the objects that are case sensitive. 
 
 8. Select all product names.
 
-Select name from unemath_Cote.Products;
+ Select name from unemath_Cote.Products;
 
 9. List the MSRP for all products in ascending order.
 
-Select msrp from unemath_Cote.Products order by msrp;
+ Select msrp from unemath_Cote.Products order by msrp;
 
 10. Find all products within  category 430.  What is category 430?
 
-Select product_id from unemath_Cote.Products where category_id=430; 
+ Select product_id from unemath_Cote.Products where category_id=430; 
 
-Category 430 is glasses.
+ Category 430 is glasses.
 
 11. Find all product id and names in category 430 manufactured by 428.
 
-Select product_id from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
+ Select product_id from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
 
 12. How many products in category 430 manufactured by 428?
-
-Select count from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
+ 
+ Select count from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
 
 18.
 
 13. How many countries make products contained in the store?
 
+ SELECT country, count(*) FROM unemath_Cote.Products group by country; 
 
 14. How many products are manufactured in the USA?
 
-Select count(*) from unemath_Cote.Products where country='usa';
+ Select count(*) from unemath_Cote.Products where country='usa';
 
-4091
+ 4091
 
 15. How many products cost the company less than $10?
 
-Select count(*) from unemath_Cote.Products where msrp <10;
+ Select count(*) from unemath_Cote.Products where msrp <10;
 
-3482
+ 3482
 
 16. How many products cost the company less than $10 and sell for more than $20?
 
-Select count(*) from unemath_Cote.Products where msrp >20 and price <10;
+ Select count(*) from unemath_Cote.Products where msrp >20 and price <10;
 
-40.
+ 40.
 
 17. How many products cost the company less than $10 and sell for less than $20?
 
-Select count(*) from unemath_Cote.Products where msrp <20 and price <10;
+ Select count(*) from unemath_Cote.Products where msrp <20 and price <10;
 
-7523
+ 7523
 
 18. Which products cost less than $10 and sell for more than $20?
 
-Select name from unemath_Cote.Products where msrp >20 and price <10;
+ Select name from unemath_Cote.Products where msrp >20 and price <10;
 
 19. Count all product's that have shipping weight less than 1 pound or greater than 20 pounds.
 
-Select count(*) from unemath_Cote.Products where ship_weight <1;
-Select count(*) from unemath_Cote.Products where ship_weight >20;
+ Select count(*) from unemath_Cote.Products where ship_weight <1;
+ Select count(*) from unemath_Cote.Products where ship_weight >20;
 
-641+465=1,106
+ 641+465=1,106
 
 20. Create your own query.
 
