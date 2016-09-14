@@ -151,6 +151,7 @@ It is case sensitive for product and column names. However, the keywords are NOT
 8. Select all product names.
 
 Select name from unemath_Cote.Products;
+
 9. List the MSRP for all products in ascending order.
 
 Select msrp from unemath_Cote.Products order by msrp;
@@ -167,6 +168,8 @@ Select product_id from unemath_Cote.Products where category_id=430 and manufactu
 
 12. How many products in category 430 manufactured by 428?
 
+Select count from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
+
 18.
 
 13. How many countries make products contained in the store?
@@ -174,17 +177,32 @@ Select product_id from unemath_Cote.Products where category_id=430 and manufactu
 
 14. How many products are manufactured in the USA?
 
+Select count(*) from unemath_Cote.Products where country='usa';
+
+4091
 
 15. How many products cost the company less than $10?
 
-Select count(*) from unemath_Cote.Products where price <10;
-7567
+Select count(*) from unemath_Cote.Products where msrp <10;
+
+3482
 
 16. How many products cost the company less than $10 and sell for more than $20?
 
+Select count(*) from unemath_Cote.Products where msrp >20 and price <10;
+
+40.
 
 17. How many products cost the company less than $10 and sell for less than $20?
+
+Select count(*) from unemath_Cote.Products where msrp <20 and price <10;
+
+7523
+
 18. Which products cost less than $10 and sell for more than $20?
+
+Select name from unemath_Cote.Products where msrp >20 and price <10;
+
 19. Count all product's that have shipping weight less than 1 pound or greater than 20 pounds.
 
 Select count(*) from unemath_Cote.Products where ship_weight <1;
@@ -193,3 +211,8 @@ Select count(*) from unemath_Cote.Products where ship_weight >20;
 641+465=1,106
 
 20. Create your own query.
+
+How many products cost $10 and $11? 
+
+Select count(*) from unemath_Cote.Products where msrp=10 and 11;
+
