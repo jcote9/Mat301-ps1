@@ -123,64 +123,159 @@ FROM database.table;
 1. What does SQL stand for?  How is it pronounced? 
 
  Structured Query Language. Pronounced "Es Que El" or "Sequel" 
+ 
+ 
+ 
+__C__
+
+
+
+
 
 2. Are SQL commands case-sensitive?  How can you determine? 
 
  No they are not case sensitive. They are case insensitive. 
+ 
+ 
+ 
+__C__
+
+
+
 
 3. What does DQL stand for?
 
  Data query language 
+ 
+ 
+ 
+__C__
+
+
+
 
 4. True or False:  Is it necessary to use the `FROM` clause with the select statement? 
 
  Yes it is necessary 
+ 
+ 
+ 
+__C__
+
+
+
 
 5. True or False:  Is it necessary to use a `WHERE` clause?  If not, when and why would you use a `WHERE` clause?
 
  False: You would use it when you want to, for example, select a price from products where price is > 9.99. In this instance we need the 'where' clause to specify the price being slected. 
+ 
+ 
+ 
+__C__
+
+
 
 6. What is the purpose of the `ORDER BY` clause?  What is its default value?  
 
  Default value is ascending. The 'ORDER BY' clause allows you to select products from a table and sort them, by price for example. 
+ 
+ 
+ 
+__C__
+
+
+
 
 7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive? 
  
  It is case sensitive for product and column names. However, the keywords are NOT case sensitive (select, from, etc.) It is the objects that are case sensitive. 
+ 
+ 
+ 
+__C__
+
+
+
 
 8. Select all product names.
 
  Select name from unemath_Cote.Products;
+ 
+ 
+__C__
+
+
+
 
 9. List the MSRP for all products in ascending order.
 
  Select msrp from unemath_Cote.Products order by msrp;
+ 
+ 
+ 
+__C__
+
+
 
 10. Find all products within  category 430.  What is category 430?
 
  Select product_id from unemath_Cote.Products where category_id=430; 
 
  Category 430 is glasses.
+ 
+ 
+ 
+__C__
+
+
 
 11. Find all product id and names in category 430 manufactured by 428.
 
  Select product_id from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
+ 
+ 
+ 
+__C__
+
+
+
 
 12. How many products in category 430 manufactured by 428?
  
  Select count from unemath_Cote.Products where category_id=430 and manufacturer_id=428;
 
  18.
+ 
+ 
+ 
+__C__
+
+
+
 
 13. How many countries make products contained in the store?
 
  SELECT country, count(*) FROM unemath_Cote.Products group by country; 
+ 
+ 
+ 
+__C__
+
+
+
 
 14. How many products are manufactured in the USA?
 
  Select count(*) from unemath_Cote.Products where country='usa';
 
  4091
+ 
+ 
+ 
+__C__
+
+
+
 
 15. How many products cost the company less than $10?
 
@@ -188,29 +283,71 @@ FROM database.table;
 
  3482
 
+
+__C__
+
+
+
 16. How many products cost the company less than $10 and sell for more than $20?
 
  Select count(*) from unemath_Cote.Products where msrp >20 and price <10;
 
  40.
+ 
+ 
+ 
+__C__
+
+
+
+
 
 17. How many products cost the company less than $10 and sell for less than $20?
 
  Select count(*) from unemath_Cote.Products where msrp <20 and price <10;
 
  7523
+ 
+ 
+ 
+__C__
+
+
+
+
 
 18. Which products cost less than $10 and sell for more than $20?
 
  Select name from unemath_Cote.Products where msrp >20 and price <10;
+ 
+ 
+ 
+__C__
+
+
+
 
 19. Count all product's that have shipping weight less than 1 pound or greater than 20 pounds.
 
  SELECT count(*) from unemath_Cote.Products where ship_weight <1 or ship_weight >20;
+ 
+ 
+ 
+__C__
+
+
+
+
 
 20. Create your own query.
 
 How many products cost $10 and $11? 
 
 Select count(*) from unemath_Cote.Products where msrp=10 and 11;
+
+
+
+__C__
+
+
 
